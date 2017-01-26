@@ -8,6 +8,9 @@
 
 import UIKit
 import XCGLogger
+import MobileCenter
+import MobileCenterAnalytics
+import MobileCenterCrashes
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -26,6 +29,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         systemDestination.showFileName = true
         systemDestination.showLineNumber = true
         systemDestination.showDate = true
+
+        MSMobileCenter.start("a0b6b4d6-5579-4de6-845e-2fbeeaa340b8", withServices:[
+            MSAnalytics.self,
+            MSCrashes.self
+        ])
         
         log.add(destination: systemDestination)
         return true
