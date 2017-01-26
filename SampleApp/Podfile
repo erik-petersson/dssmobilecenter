@@ -7,6 +7,7 @@ target 'SampleApp' do
 
   # Pods for SampleApp
   pod 'XCGLogger', '~> 4.0.0'
+  pod ‘MobileCenter’
 
   target 'SampleAppTests' do
     inherit! :search_paths
